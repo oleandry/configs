@@ -1,0 +1,55 @@
+[credential]
+      helper = manager
+      writelog = false
+[url "https://"]
+      insteadOf = git://
+[url "https://github.com/"]
+      insteadOf = git@github.com:
+[http]
+[https]
+      proxy = http://193.34.40.30:8080
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE 
+[merge]
+      tool = vsdiffmerge
+[mergetool]
+      prompt = false
+[mergetool "vsdiffmerge"]
+      cmd = '"C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/vsdiffmerge.exe"' "$REMOTE" "$LOCAL" "$BASE" "$MERGED" //m
+      keepbackup = false
+      trustexitcode = true
+[core]
+      editor = "'C:/Program Files (x86)/Microsoft VS Code/code.exe'" -w
+      autocrlf = true
+      excludesfile = C:\\Users\\o1r.EUROPE\\Documents\\gitignore_global.txt
+[push]
+      default = simple
+[user]
+	name = Ole Andreas Rydland
+[user]
+      email = ole.andreas.rydland@if.no
+[pull]
+      rebase = true
+[status]
+      submoduleSummary = true
+[color]
+      ui = auto
+[alias]
+	cp = cherry-pick
+      st = status -s
+      cl = clone
+      ci = commit
+      co = checkout
+      br = branch 
+      diff = diff --word-diff
+      dc = diff --cached
+	logl = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+      r = reset
+      r1 = reset HEAD^
+      r2 = reset HEAD^^
+      rh = reset --hard
+      rh1 = reset HEAD^ --hard
+      rh2 = reset HEAD^^ --hard
+      logtree = log --graph --oneline --decorate --all
