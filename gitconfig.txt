@@ -1,13 +1,6 @@
 [credential]
       helper = manager
       writelog = false
-[url "https://"]
-      insteadOf = git://
-[url "https://github.com/"]
-      insteadOf = git@github.com:
-[http]
-[https]
-      proxy = http://193.34.40.30:8080
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
@@ -23,13 +16,13 @@
 [core]
       editor = "'C:/Program Files (x86)/Microsoft VS Code/code.exe'" -w
       autocrlf = true
-      excludesfile = C:\\Users\\o1r.EUROPE\\Documents\\gitignore_global.txt
+      excludesfile = C:\\Users\\<USERNAME>\\Documents\\gitignore_global.txt
 [push]
       default = simple
 [user]
 	name = Ole Andreas Rydland
 [user]
-      email = ole.andreas.rydland@if.no
+      email = <EMAIL>
 [pull]
       rebase = true
 [status]
@@ -37,7 +30,7 @@
 [color]
       ui = auto
 [alias]
-	cp = cherry-pick
+      cp = cherry-pick
       st = status -s
       cl = clone
       ci = commit
@@ -45,7 +38,7 @@
       br = branch 
       diff = diff --word-diff
       dc = diff --cached
-	logl = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	  logl = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
       r = reset
       r1 = reset HEAD^
       r2 = reset HEAD^^
