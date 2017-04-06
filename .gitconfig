@@ -19,6 +19,7 @@
       excludesfile = C:\\Users\\<USERNAME>\\Documents\\gitignore_global.txt
 [push]
       default = simple
+      followTags = true
 [user]
 	name = Ole Andreas Rydland
 [user]
@@ -27,6 +28,7 @@
       rebase = true
 [status]
       submoduleSummary = true
+      showUntrackedFiles = all
 [color]
       ui = auto
 [alias]
@@ -54,6 +56,7 @@
       log-graph = log --graph --all  --decorate --oneline
       log-standup = !git log --since yesterday --author $(git config user.email) --pretty=short
       hist = log --pretty=format:\"%C(yellow)%h%C(reset) %C(green)%ad%C(reset) %C(red)|%C(reset) %s %C(bold blue)[%an]%C(reset)%C(yellow)%d%C(reset)\" --graph --date=short
+      stash-all = stash save --include-untracked
 reply
 
 [rebase]
